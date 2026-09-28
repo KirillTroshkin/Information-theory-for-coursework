@@ -1,2 +1,2 @@
-# Information-theory-for-coursework
-Here are some notes and notebooks for my coursework.
+# Information-theoretic analysis of crypto market data
+Information-theoretic analysis of crypto market data: Shannon entropy, mutual information between assets, asset clustering, and diversification experiments.
