@@ -43,14 +43,6 @@ validation on the following days.
 - Conclusion: entropy features carry a weak, inconsistent signal on this
   sample; no claim of predictive power is made.
 
-## Limitations
-
-- One month of training data, three assets, validation windows of 2-7 days.
-- The target (price move over the last 48 bars) overlaps with the window
-  used to compute the entropy, so the experiments measure contemporaneous
-  association rather than out-of-sample forecasting.
-- No transaction-cost or trading simulation.
-
 ## Data and reproducibility
 
 Input: Binance USDT-margined futures trades (timestamp, side, price,
