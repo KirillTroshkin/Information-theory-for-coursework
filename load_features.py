@@ -402,7 +402,7 @@ def process_instrument(instrument, x, process_file, params_dict, feature_name):
 
     completed_instruments = load_checkpoint(feature_name, CHECKPOINT_FILE)
     if instrument in completed_instruments:
-        print(f"{instrument} уже обработан, пропускаем...")
+        print(f"{instrument} is already processed, skipping...")
         return instrument, None
 
     data = pd.Series(dtype="float64")
@@ -420,7 +420,7 @@ def process_instrument(instrument, x, process_file, params_dict, feature_name):
 
         os.makedirs(feature_dir, exist_ok=True)
         data.to_frame(name="value").to_parquet(save_path, index=True)
-        print(f"Данные для {instrument} сохранены в {save_path}")
+        print(f"Data for {instrument} is saved {save_path}")
 
         save_checkpoint(instrument, feature_name, CHECKPOINT_FILE)
 
@@ -440,7 +440,7 @@ def process_all_instruments(instruments_list, x, process_file, params_dict, feat
 
     end_time = time.time()
     elapsed_time = end_time - start_time
-    print(f"\nВремя выполнения: {elapsed_time:.2f} секунд ({elapsed_time/60:.2f} минут)")
+    print(f"\nTime: {elapsed_time:.2f} seconds ({elapsed_time/60:.2f} minutes)")
 
 
 
